@@ -2,7 +2,9 @@ import './App.css';
 
 import PaginaPrincipal from './componentes/paginaprincipal';
 
-import ClientesListar from './componentes/clientesListar';
+import PedidosListar from './componentes/pedidoslistar';
+//Agregar 
+import PedidosAgregar from './componentes/pedidosagregar';
 
 import Informacion from './componentes/informacion';
 
@@ -25,7 +27,7 @@ function App() {
               <a className="nav-link active" aria-current="page" href="/">Inicio</a>
             </li> 
             <li className="nav-item">
-              <a className="nav-link" href="/clienteslistar">Clientes</a>
+              <a className="nav-link" href="/pedidoslistar">Pedidos</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/informacion">Informacion</a>
@@ -40,7 +42,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<PaginaPrincipal/>} exact></Route>
-        <Route path='clienteslistar' element={<ClientesListar/>} exact></Route>      
+        <Route path='/pedidoslistar' element={<PedidosListar/>} exact></Route>
+        
+        <Route path='/pedidosagregar' element={<PedidosAgregar/>} exact></Route>
         <Route path='/informacion' element={<Informacion/>} exact></Route>
         <Route path='/registrarse' element={<Registrarse/>} exact></Route>
       </Routes>    

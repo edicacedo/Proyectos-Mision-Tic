@@ -5,7 +5,7 @@ const app = express();
 const miconexion = require('./conexion');
 
 //Importo las rutas
-const rutas = require('./routes/routers');
+const rutas = require('./routers/routers');
 app.use('/api',rutas);
 
 //Petición de prueba con metodo GET
