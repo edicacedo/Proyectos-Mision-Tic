@@ -4,6 +4,11 @@ const app = express();
 
 const miconexion = require('./conexion');
 
+//Agregar body-parser
+const bodyparser = require('body-parser');
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended:true}));
+
 //Importo las rutas
 const rutas = require('./routers/routers');
 app.use('/api',rutas);

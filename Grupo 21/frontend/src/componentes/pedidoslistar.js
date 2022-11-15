@@ -44,7 +44,7 @@ function PedidosListar()
                             <td align="right">{mipedido.valor}</td>
                             <td align="center">{mipedido.activo ? 'Activo' : 'Inactivo'}</td>
                             <td align="center"><Link to={`/pedidoseditar/${mipedido.id}`}><li className='btn btn-info'>Editar</li></Link></td>
-                            <td align="center"><li className='btn btn-danger' onClick={()=>{PedidosBorrar(mipedido.id)}}>Borrar</li></td>
+                            
                         </tr>
                     ))
                     }
