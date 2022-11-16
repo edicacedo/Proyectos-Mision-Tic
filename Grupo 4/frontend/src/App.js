@@ -43,7 +43,6 @@ function App() {
       <Routes>
         <Route path='/' element={<PaginaPrincipal/>} exact></Route>
         <Route path='/pedidoslistar' element={<PedidosListar/>} exact></Route>
-        
         <Route path='/pedidosagregar' element={<PedidosAgregar/>} exact></Route>
         <Route path='/informacion' element={<Informacion/>} exact></Route>
         <Route path='/registrarse' element={<Registrarse/>} exact></Route>
