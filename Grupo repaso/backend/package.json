@@ -1,13 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Mi primer servidor con Node.js",
+  "description": "",
   "main": "servidor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon servidor.js"
   },
-  "author": "Grupo 10 MisionTic",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",

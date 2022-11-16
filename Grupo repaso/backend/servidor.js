@@ -1,16 +1,20 @@
-const express = require ('express');
+//Establezco la conexión
+const express = require('express');
 const app = express();
 
 const miconexion = require('./conexion');
 
-app.listen(1111, function(){
-    console.log('Servidor funcionando en el link: http://127.0.0.1:1111');
-});
-
-app.get('/', function(req,res){
-    res.send('<h1>Hola Mundo...</h1>');
-});
-
-//Importar rutas
-const rutas = require ('./rutas/router');
+//Importo las rutas
+const rutas = require('./routers/routers');
 app.use('/api',rutas);
+
+//Petición de prueba con metodo GET
+app.get('/', (req,res) => {
+    res.send("Servidor Backend corriendo OK! <button>Aceptar</button>");
+})
+
+//Inicializar servidor en puerto 5000
+app.listen(5000,function()
+{
+    console.log("Mi servidor funciona en el puerto 5000 - http://localhost:5000");
+})
