@@ -6,7 +6,7 @@ const esquemaPedido = new miesquema({
     id : String,
     id_cliente : String,
     fecha : String,
-    valor : Number,
+    valor : String,
     activo : Boolean
 })
 

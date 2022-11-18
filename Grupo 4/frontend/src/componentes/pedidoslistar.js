@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
-//import PedidosBorrar from './pedidosborrar';
+import PedidosBorrar from './pedidosborrar';
 
 //Metodo que contiene las tareas para listar pedidos
 function PedidosListar()
