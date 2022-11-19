@@ -24,15 +24,17 @@ function PedidosListar()
                 <table className="table table-bordered">
                     <thead className="thead-dark">
                         <tr key={0}>
-                            <td colSpan={6} align="right"><Link to={'/pedidosagregar'}><li className='btn btn-success'>Agregar Pedido</li></Link></td>
+                            <td colSpan={7}><Link to={'/pedidosagregar'}>
+                                <li className="btn btn-primary">Agregar Pedido</li>
+                                </Link></td>
                         </tr>
                         <tr key={0}>
                             <td align="center">Id</td>
+                            <td>Id Cliente</td>
                             <td>Fecha</td>
                             <td>Valor</td>
                             <td align="center">Estado</td>
-                            <td align="center"></td>
-                            <td align="center"></td>
+                            <td align="center" colSpan={2}>Controles</td>
                         </tr>
                     </thead> 
                     <tbody className='dialog'>
@@ -40,11 +42,10 @@ function PedidosListar()
                         dataPedidos.map(mipedido => (
                         <tr key={mipedido.id}>
                             <td align="center">{mipedido.id}</td>
+                            <td>{mipedido.id_cliente}</td>
                             <td>{mipedido.fecha}</td>
                             <td align="right">{mipedido.valor}</td>
                             <td align="center">{mipedido.activo ? 'Activo' : 'Inactivo'}</td>
-                            <td align="center"><Link to={`/pedidoseditar/${mipedido.id}`}><li className='btn btn-info'>Editar</li></Link></td>
-                            <td align="center"><li className='btn btn-danger' onClick={()=>{PedidosBorrar(mipedido.id)}}>Borrar</li></td>
                         </tr>
                     ))
                     }

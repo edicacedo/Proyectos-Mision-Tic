@@ -16,6 +16,25 @@ router.get('/listar', (req, res) => {
     })
 });
 //Agregar
+router.post('/agregar', (req, res)=>{
+    const nuevoPedido = new modeloPedido({
+        id: req.body.id,
+        id_cliente: req.body.id_cliente,
+        fecha: req.body.fecha,
+        valor: req.body.valor,
+        activo: req.body.activo
+    });
+    nuevoPedido.save(function(err){
+        if(!err)
+        {
+            res.send('Se registro la información con éxito.');
+        }
+        else
+        {
+            res.send(err.stack);
+        }
+    })
+})
 
 //editar
 

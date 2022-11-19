@@ -33,7 +33,7 @@ function App() {
               <a className="nav-link" href="/informacion">Informacion</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/registrarse">Registrarse</a>
+              <a className="nav-link" href="/registrarse">Informacion</a>
             </li>
           </ul>
         </div>
@@ -43,7 +43,6 @@ function App() {
       <Routes>
         <Route path='/' element={<PaginaPrincipal/>} exact></Route>
         <Route path='/pedidoslistar' element={<PedidosListar/>} exact></Route>
-        
         <Route path='/pedidosagregar' element={<PedidosAgregar/>} exact></Route>
         <Route path='/informacion' element={<Informacion/>} exact></Route>
         <Route path='/registrarse' element={<Registrarse/>} exact></Route>

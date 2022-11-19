@@ -23,6 +23,12 @@ function PedidosListar()
                     <table className='table table-dark'>
                         <thead>
                             <tr>
+                                <td colSpan={5}><Link to={'/pedidosagregar'}>
+                                        <li className='btn btn-primary'>Agregar Pedido</li>
+                                    </Link>
+                                </td>
+                            </tr>
+                            <tr>
                                 <th>ID</th>
                                 <th>ID CLIENTE</th>
                                 <th>FECHA</th>
