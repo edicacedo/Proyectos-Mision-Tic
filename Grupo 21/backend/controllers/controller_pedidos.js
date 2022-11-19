@@ -20,6 +20,7 @@ router.get('/listar', (req, res) => {
 router.post('/agregar',(req, res)=>{
     const nuevoPedido = new modeloPedido({
         id: req.body.id,
+        id_cliente: req.body.id_cliente,
         fecha : req.body.fecha,
         valor : req.body.valor,
         activo : req.body.activo
@@ -70,5 +71,19 @@ router.delete('/borrar/:id',(req,res)=>{
         }
     });
 });
+
+//
+router.get('/cargar/:id',(req, res)=>{
+    modeloPedido.find({id:req.params.id}, function(docs,err){
+        if(!err)
+        {
+            res.send(docs);
+        }
+        else
+        {
+            res.send(err.stack)
+        }
+    })
+})
 
 module.exports = router;

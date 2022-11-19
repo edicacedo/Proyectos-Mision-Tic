@@ -6,5 +6,6 @@ router.get("/listar",controladorPedidos);
 router.post('/agregar',controladorPedidos);
 router.delete('/borrar/:id', controladorPedidos);
 router.post('/editar/:id',controladorPedidos);
+router.get('/cargar/:id',controladorPedidos);
 
 module.exports = router;
