@@ -31,7 +31,7 @@ export default function PedidosAgregar()
                 icon: 'success',
                 title : 'Pedido agregado correctamente.',
                 showConfirmButton : false,
-                timer : 2000
+                timer : 1500
             })
             navigate('/pedidoslistar');
         }).catch(err=>{console.log(err.stack)})

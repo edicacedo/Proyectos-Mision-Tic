@@ -10,6 +10,8 @@ import Informacion from './componentes/informacion';
 
 import Registrarse from './componentes/registrarse';
 
+import PedidosBorrar from './componentes/pedidosborrar';
+
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -46,6 +48,7 @@ function App() {
         <Route path='/pedidosagregar' element={<PedidosAgregar/>} exact></Route>
         <Route path='/informacion' element={<Informacion/>} exact></Route>
         <Route path='/registrarse' element={<Registrarse/>} exact></Route>
+        <Route path='/pedidosborrar' element={<PedidosBorrar/>} exact></Route>
       </Routes>    
     </BrowserRouter>
     <section className="mt-5 mb-5">

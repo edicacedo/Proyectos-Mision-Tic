@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
-//import PedidosBorrar from './pedidosborrar';
+import PedidosBorrar from './pedidosborrar';
 
 //Metodo que contiene las tareas para listar pedidos
 function PedidosListar()
@@ -44,6 +44,7 @@ function PedidosListar()
                                         <td>{pedido.id_cliente}</td>
                                         <td>{pedido.fecha}</td>
                                         <td>{pedido.valor}</td>
+                                        <td colSpan={2}><li className='btn btn-danger' onClick={()=>{PedidosBorrar(pedido.id)}}>Borrar</li></td>
                                     </tr>
                                 ))
                             }
